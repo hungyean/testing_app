@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+      <ion-row>
+          <ion-col class="t2-lbl" size="3" *ngIf="test">
+            <ion-label>Name:</ion-label>
+          </ion-col>
+          <ion-col size="9">
+            <ion-input [(ngModel)]="name" value="{{test?.name}}" placeholder="Enter Your Name" class="t2-ipt"></ion-input>
+          </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            <!-- {{test.id}} -->
+            <ion-button (click)="updateItem(test)" expand="block">Edit Name</ion-button>
+            <!-- <ion-button href="tab3" routerDirection="backward">Go tab3</ion-button> -->
+          </ion-col>
+      </ion-row>
+  </ion-grid>
+</ion-content>
